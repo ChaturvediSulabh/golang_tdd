@@ -2,9 +2,14 @@ package hello
 
 import "fmt"
 
+const greetPrefix = "Hello, "
+
 // Hello - Hello, World
 func Hello(name string) string {
-	return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	return greetPrefix + name
 }
 
 func hello() {
