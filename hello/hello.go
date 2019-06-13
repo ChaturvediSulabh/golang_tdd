@@ -20,7 +20,7 @@ func prefix(language string) (greetPrefix string) {
 	default:
 		greetPrefix = "Hello, "
 	}
-	return greetPrefix
+	return
 }
 
 func hello() {
