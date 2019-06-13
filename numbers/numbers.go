@@ -1,6 +1,6 @@
 package numbers
 
-//Sum - addition
+//Sum - takes two integers and outputs the value obtained after adding those two integers
 func Sum(n, m int) int {
-	return 4
+	return n + m
 }
