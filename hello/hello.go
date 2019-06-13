@@ -2,16 +2,21 @@ package hello
 
 import "fmt"
 
-const greetPrefix = "Hello, "
-
-// Hello - Hello, World
-func Hello(name string) string {
+// Hello - Greet
+func Hello(name, language string) string {
+	var greetPrefix = "Hello, "
 	if name == "" {
 		name = "World"
+	}
+	switch language {
+	case "Spanish":
+		greetPrefix = "Hola, "
+	case "French":
+		greetPrefix = "Bonjour, "
 	}
 	return greetPrefix + name
 }
 
 func hello() {
-	fmt.Println(Hello("world"))
+	fmt.Println(Hello("", ""))
 }
