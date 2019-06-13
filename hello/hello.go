@@ -4,17 +4,24 @@ import "fmt"
 
 // Hello - Greet
 func Hello(name, language string) string {
-	var greetPrefix = "Hello, "
 	if name == "" {
 		name = "World"
 	}
+	greetPrefix := prefix(language)
+	return greetPrefix + name
+}
+
+func prefix(language string) string {
+	var greetPrefix string
 	switch language {
 	case "Spanish":
 		greetPrefix = "Hola, "
 	case "French":
 		greetPrefix = "Bonjour, "
+	default:
+		greetPrefix = "Hello, "
 	}
-	return greetPrefix + name
+	return greetPrefix
 }
 
 func hello() {
